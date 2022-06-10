@@ -1,0 +1,1701 @@
+[
+    {
+        "id": "17ffabd70c78ca8f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a964f91f16573d7e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b5cd380313e08cf4",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.4.34",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "0e09bdce23f42144",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "795e3e01e76aef35",
+        "type": "ui_tab",
+        "name": "IOT-Gateway",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fe33db17b89bf08d",
+        "type": "ui_group",
+        "name": "LED-monitor",
+        "tab": "795e3e01e76aef35",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e408e967fbc26cc5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b676be68a101a11b",
+        "type": "ui_group",
+        "name": "Guage",
+        "tab": "795e3e01e76aef35",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "05b027485828fde5",
+        "type": "ui_group",
+        "name": "Chart",
+        "tab": "795e3e01e76aef35",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c88f7bb6206850a9",
+        "type": "ui_group",
+        "name": "Digital Input",
+        "tab": "795e3e01e76aef35",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a3e4c680e9ffe374",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f54075c0cdd25da1",
+        "type": "ui_spacer",
+        "z": "17ffabd70c78ca8f",
+        "name": "spacer",
+        "group": "c88f7bb6206850a9",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "186e75f58364ab10",
+        "type": "ui_spacer",
+        "z": "17ffabd70c78ca8f",
+        "name": "spacer",
+        "group": "c88f7bb6206850a9",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "589597a3d3945352",
+        "type": "inject",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[12]",
+        "payloadType": "json",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "d7fe1f31edc6bf12"
+            ]
+        ]
+    },
+    {
+        "id": "ac572f44f3946cc4",
+        "type": "modbus-read",
+        "z": "17ffabd70c78ca8f",
+        "name": "Digital Output",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "rate": "250",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "b5cd380313e08cf4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "d7fe1f31edc6bf12",
+                "e5e757b48263b177"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e5e757b48263b177",
+        "type": "debug",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d7fe1f31edc6bf12",
+        "type": "function",
+        "z": "17ffabd70c78ca8f",
+        "name": "Scatter Digital Input",
+        "func": "var msgArray = [];\n\nfor (var i = 0; i < 16; i++) {\nmsgArray[i]={\n    payload: (msg.payload[0] & Math.pow(2,i))/Math.pow(2,i)};\n}\n\nreturn msgArray;\n",
+        "outputs": 16,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "36ef6031d83fa2cc"
+            ],
+            [
+                "60f72cb6fefba77e"
+            ],
+            [
+                "c5fac52b991e0e1e"
+            ],
+            [
+                "6b1e477f85d1bbe3"
+            ],
+            [
+                "cf7d8bb6aa57a6e0"
+            ],
+            [
+                "24f287dfcbf84202"
+            ],
+            [
+                "7d949ddc04ca0e97"
+            ],
+            [
+                "c0937dd27ee91dda"
+            ],
+            [
+                "e354d36966504542"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e692d8aa1fb4d981",
+        "type": "function",
+        "z": "17ffabd70c78ca8f",
+        "name": "Scatter Analog Input",
+        "func": "var msgArray = [];\n\nfor (var i=0;i< msg.payload.length;i++) {\n       \n        msgArray[i] = {\n            payload: ((msg.payload[i]*150/27648)-50).toFixed(2)\n             \n        };\n        \n}\n \n\nreturn msgArray;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "6c919b49fad678f8",
+                "144d7d378b8acb05"
+            ],
+            [
+                "b775504baa320934",
+                "ee3852ba581cd647",
+                "2297352b7d9180eb"
+            ]
+        ]
+    },
+    {
+        "id": "75c32a18782db66a",
+        "type": "function",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "var boolArr = context.get(\"boolArr\");\nvar boolReg = 0;\n\nboolArr[Number(msg.topic)] = msg.payload;\ncontext.set(\"boolArr\",boolArr);\n\nfor (var i=0; i<boolArr.length; i++) {\n    boolReg += boolArr[i];\n}\n\nmsg.payload = boolReg;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar a = [];\nfor (var i = 0; i<16; i++) {\na[i] = 0;\n}\ncontext.set(\"boolArr\", a);",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 1140,
+        "wires": [
+            [
+                "2e579072aea9eb5e",
+                "92eabe0c5323e609"
+            ]
+        ]
+    },
+    {
+        "id": "2e579072aea9eb5e",
+        "type": "debug",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "36ef6031d83fa2cc",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 1,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Heater",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Heater LED",
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b775504baa320934",
+        "type": "ui_gauge",
+        "z": "17ffabd70c78ca8f",
+        "name": "Temp. (Hot Side)(Guage)",
+        "group": "b676be68a101a11b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp. (Hot Side)",
+        "label": "Celcius",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 650,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ee3852ba581cd647",
+        "type": "ui_chart",
+        "z": "17ffabd70c78ca8f",
+        "name": "Temp. (Hot Side)",
+        "group": "05b027485828fde5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temp. (Hot Side)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "80",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "144d7d378b8acb05",
+        "type": "ui_gauge",
+        "z": "17ffabd70c78ca8f",
+        "name": "Temp. (Cool Side) (Guage)",
+        "group": "b676be68a101a11b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp. (Cool Side)",
+        "label": "Celcius",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 660,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6c919b49fad678f8",
+        "type": "ui_chart",
+        "z": "17ffabd70c78ca8f",
+        "name": "Temp. (Cool Side)",
+        "group": "05b027485828fde5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temp. (Cool Side)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "80",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2297352b7d9180eb",
+        "type": "switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "65",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "0f650414afbb3fc5"
+            ]
+        ]
+    },
+    {
+        "id": "0f650414afbb3fc5",
+        "type": "delay",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "c805f88522135512"
+            ]
+        ]
+    },
+    {
+        "id": "c805f88522135512",
+        "type": "function",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "var temp = msg.payload;\nvar datetime = new Date();\nvar dateString = datetime.toLocaleString();\n\nvar warningStr = 'Warning: Hot side temperature unusually high \\n Temperature: ' + temp + '\\nTime: ' + dateString;\n\nmsg.payload = warningStr;\nmsg.topic = '[Temperature Machine] Temperature Warning';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 640,
+        "wires": [
+            [
+                "a3dc340b2d7b62f1",
+                "fc2093df8e1f59dd"
+            ]
+        ]
+    },
+    {
+        "id": "a3dc340b2d7b62f1",
+        "type": "e-mail",
+        "z": "17ffabd70c78ca8f",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "fidauz95@ymail.com ",
+        "dname": "dos",
+        "x": 1130,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "60f72cb6fefba77e",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 2,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Small Fan ",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Small Fan LED",
+        "x": 800,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c5fac52b991e0e1e",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 3,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Large Fan ",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Large Fan  LED",
+        "x": 800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6b1e477f85d1bbe3",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 4,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Peltier Switch",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Peltier Switch",
+        "x": 800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cf7d8bb6aa57a6e0",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 5,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Small Fan Switch",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Small Fan Switch",
+        "x": 810,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "24f287dfcbf84202",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 6,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "Large Fan Switch",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Large Fan Switch",
+        "x": 810,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7d949ddc04ca0e97",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 7,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "TL Red",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "TL Red",
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c0937dd27ee91dda",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 8,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "TL Yellow",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "TL Yellow",
+        "x": 780,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e354d36966504542",
+        "type": "ui_led",
+        "z": "17ffabd70c78ca8f",
+        "order": 9,
+        "group": "fe33db17b89bf08d",
+        "width": 0,
+        "height": 0,
+        "label": "TL Green",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "TL Green",
+        "x": 780,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bd7c20f522ea7219",
+        "type": "ui_switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "label": "Auto/Manual",
+        "tooltip": "",
+        "group": "c88f7bb6206850a9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "0",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 390,
+        "y": 1020,
+        "wires": [
+            [
+                "75c32a18782db66a",
+                "8ee8bc2749658ee6"
+            ]
+        ]
+    },
+    {
+        "id": "7db64035a1e883fe",
+        "type": "ui_switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "Heater",
+        "label": "Heater",
+        "tooltip": "",
+        "group": "c88f7bb6206850a9",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "2",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "4",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 370,
+        "y": 1140,
+        "wires": [
+            [
+                "75c32a18782db66a",
+                "d7db4fcba241543d"
+            ]
+        ]
+    },
+    {
+        "id": "532dd4381a3ebc11",
+        "type": "ui_switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "label": "Small Fan",
+        "tooltip": "",
+        "group": "c88f7bb6206850a9",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "3",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "8",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 1200,
+        "wires": [
+            [
+                "75c32a18782db66a",
+                "66eb7592daa20867"
+            ]
+        ]
+    },
+    {
+        "id": "6ceeb2d8712d0419",
+        "type": "ui_switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "label": "Large Fan",
+        "tooltip": "",
+        "group": "c88f7bb6206850a9",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "4",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "16",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 390,
+        "y": 1260,
+        "wires": [
+            [
+                "75c32a18782db66a",
+                "3e7beb0534164e8f"
+            ]
+        ]
+    },
+    {
+        "id": "32c60550cd61faf2",
+        "type": "modbus-read",
+        "z": "17ffabd70c78ca8f",
+        "name": "Analog Output",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "2",
+        "rate": "250",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "b5cd380313e08cf4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "e692d8aa1fb4d981",
+                "6dc20f25f5ce017b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "98761b3e3ff09bfa",
+        "type": "ui_switch",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "label": "E-Stop",
+        "tooltip": "",
+        "group": "c88f7bb6206850a9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "1",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "2",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            [
+                "75c32a18782db66a",
+                "e6e63df0007ae61f"
+            ]
+        ]
+    },
+    {
+        "id": "92eabe0c5323e609",
+        "type": "modbus-write",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "b5cd380313e08cf4",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 840,
+        "y": 1080,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6dc20f25f5ce017b",
+        "type": "debug",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 310,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "edfaab1c135f6e45",
+        "type": "rbe",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 250,
+        "y": 1020,
+        "wires": [
+            [
+                "bd7c20f522ea7219"
+            ]
+        ]
+    },
+    {
+        "id": "83811315d725bd69",
+        "type": "rbe",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 250,
+        "y": 1080,
+        "wires": [
+            [
+                "98761b3e3ff09bfa"
+            ]
+        ]
+    },
+    {
+        "id": "0f6cb724ce40534d",
+        "type": "rbe",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 250,
+        "y": 1140,
+        "wires": [
+            [
+                "7db64035a1e883fe"
+            ]
+        ]
+    },
+    {
+        "id": "7e7363de62366911",
+        "type": "rbe",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 250,
+        "y": 1200,
+        "wires": [
+            [
+                "532dd4381a3ebc11"
+            ]
+        ]
+    },
+    {
+        "id": "91c5a65644225832",
+        "type": "rbe",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 250,
+        "y": 1260,
+        "wires": [
+            [
+                "6ceeb2d8712d0419"
+            ]
+        ]
+    },
+    {
+        "id": "43cd981f50dbc030",
+        "type": "mqtt in",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "peltier_rid",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "0f6cb724ce40534d"
+            ]
+        ]
+    },
+    {
+        "id": "a9104f1aca631830",
+        "type": "mqtt in",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "small_fan_rid",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 1200,
+        "wires": [
+            [
+                "7e7363de62366911"
+            ]
+        ]
+    },
+    {
+        "id": "27ab8f20ac7201f9",
+        "type": "mqtt in",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "large_fan_rid",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 1260,
+        "wires": [
+            [
+                "91c5a65644225832"
+            ]
+        ]
+    },
+    {
+        "id": "d7db4fcba241543d",
+        "type": "mqtt out",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "peltier_rid",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 620,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "66eb7592daa20867",
+        "type": "mqtt out",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "small_fan_rid",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 630,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "3e7beb0534164e8f",
+        "type": "mqtt out",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "large_fan_rid",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 630,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "019292ce45bcf7bd",
+        "type": "mqtt in",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "auto/manual_rid",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 1020,
+        "wires": [
+            [
+                "edfaab1c135f6e45"
+            ]
+        ]
+    },
+    {
+        "id": "7e002d31316ad9bb",
+        "type": "mqtt in",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "E_stop_rid",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 1080,
+        "wires": [
+            [
+                "83811315d725bd69"
+            ]
+        ]
+    },
+    {
+        "id": "8ee8bc2749658ee6",
+        "type": "mqtt out",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "auto/manual_rid",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 640,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "e6e63df0007ae61f",
+        "type": "mqtt out",
+        "z": "17ffabd70c78ca8f",
+        "name": "",
+        "topic": "E_stop_rid",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 630,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "fc2093df8e1f59dd",
+        "type": "e-mail",
+        "z": "17ffabd70c78ca8f",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "rid.storage98@ymail.com ",
+        "dname": "rid",
+        "x": 1130,
+        "y": 660,
+        "wires": [],
+        "info": "odvrrznizybkggzo"
+    },
+    {
+        "id": "c521f7d1ce96a468",
+        "type": "modbus-read",
+        "z": "a964f91f16573d7e",
+        "name": "Digital Output",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1",
+        "quantity": "1",
+        "rate": "250",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "b5cd380313e08cf4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "c0448c6c786bb60b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c0448c6c786bb60b",
+        "type": "mqtt out",
+        "z": "a964f91f16573d7e",
+        "name": "",
+        "topic": "modbus_digital_output",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 660,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c7d3d3004219aff2",
+        "type": "modbus-read",
+        "z": "a964f91f16573d7e",
+        "name": "Digital Input",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "rate": "250",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "b5cd380313e08cf4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "829c06d24328b340"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4fdc818cb01b9271",
+        "type": "modbus-read",
+        "z": "a964f91f16573d7e",
+        "name": "Analog Output",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "2",
+        "quantity": "2",
+        "rate": "250",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "b5cd380313e08cf4",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "f02e73232a5177f3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "829c06d24328b340",
+        "type": "mqtt out",
+        "z": "a964f91f16573d7e",
+        "name": "",
+        "topic": "modbus_digital_input",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f02e73232a5177f3",
+        "type": "mqtt out",
+        "z": "a964f91f16573d7e",
+        "name": "",
+        "topic": "modbus_analog_output",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e408e967fbc26cc5",
+        "x": 670,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3da59df3e0a46527",
+        "type": "mqtt in",
+        "z": "a964f91f16573d7e",
+        "name": "",
+        "topic": "modbus_write",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "e408e967fbc26cc5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "99eb0b11e07d9118"
+            ]
+        ]
+    },
+    {
+        "id": "99eb0b11e07d9118",
+        "type": "modbus-write",
+        "z": "a964f91f16573d7e",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "1",
+        "server": "b5cd380313e08cf4",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [],
+            []
+        ]
+    }
+]
